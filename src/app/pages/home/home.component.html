@@ -1,10 +1,6 @@
 <main id="container">
   <app-foto-pokemon></app-foto-pokemon>
-  <div id="tarjetaContainer">
-    <app-tarjeta></app-tarjeta>
-    <app-tarjeta></app-tarjeta>
-    <app-tarjeta></app-tarjeta>
-    <app-tarjeta></app-tarjeta>
-    <app-tarjeta></app-tarjeta>
+  <div id="tarjetaContainer" #tarjetas (scroll)="Scroll($event)">
+    <app-tarjeta *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-tarjeta>
   </div>
 </main>

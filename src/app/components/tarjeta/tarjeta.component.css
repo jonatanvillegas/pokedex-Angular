@@ -1,0 +1,44 @@
+#container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.flecha{
+  color: var(--var-color-blanco);
+  z-index: 1;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0 20px;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  background-color: #fceab8;
+  border-radius: 25px 5px 5px 25px;
+  width: 100%;
+  font-size: large;
+  gap: 5px;
+  padding-left: 10px;
+  isolation: isolate;
+}
+img{
+  height: 50px;
+}
+.seleccionado::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 8px);
+  height: 120%;
+  left: 0px;
+  background-color: #da4443;
+  z-index: 0;
+  border-radius: 5px;
+}
+
+#circulo {
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  background: rgba(3, 3, 3, 0.128);
+}

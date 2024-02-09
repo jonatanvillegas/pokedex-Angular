@@ -1,1 +1,9 @@
-<p>tarjeta works!</p>
+<div id="container">
+  <span class="flecha">></span>
+  <div class="tarjeta">
+    <div id="circulo"></div>
+    <img src={{imagen}} alt="">
+    <span> No. {{id}}</span>
+    <span *ngIf="pokemon">{{ pokemon.name | titlecase}}</span>
+  </div>
+</div>
