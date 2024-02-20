@@ -330,7 +330,7 @@ export interface PastType {
   types: Type[];
 }
 
-export interface Pokemon {
+export interface pokemonSeleccionado {
   id: number;
   name: string;
   base_experience: number;

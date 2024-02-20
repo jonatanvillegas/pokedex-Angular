@@ -29,6 +29,7 @@
 }
 app-foto-pokemon{
 margin-left: 100px;
+z-index: 2;
 }
 #tarjetaContainer{
 display: flex;
@@ -36,6 +37,7 @@ flex-direction: column;
 gap: 10px;
 max-height: 550px;
 overflow-y: auto;
+overflow-x: hidden;
 margin-right: 20px;
 }
 #tarjetaContainer::-webkit-scrollbar {
@@ -53,4 +55,15 @@ margin-right: 20px;
 
 #tarjetaContainer::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* color del control deslizante al pasar el mouse */
+}
+/*app detalle*/
+app-detalle{
+  position: absolute;
+  z-index: 2;
+  left: -95vw;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.abierto{
+left: 0;
 }

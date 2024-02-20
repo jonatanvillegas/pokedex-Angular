@@ -4,6 +4,7 @@
   align-items: center;
 }
 .flecha{
+  position: absolute;
   color: var(--var-color-blanco);
   z-index: 1;
   font-weight: bold;
@@ -16,16 +17,17 @@
   align-items: center;
   background-color: #fceab8;
   border-radius: 25px 5px 5px 25px;
-  width: 100%;
+  width: 90%;
   font-size: large;
   gap: 5px;
   padding-left: 10px;
   isolation: isolate;
+  margin-left: 45px;
 }
 img{
   height: 50px;
 }
-.seleccionado::before {
+.tarjetaSeleccionada::before {
   position: absolute;
   content: "";
   width: calc(100% + 8px);

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable,empty } from 'rxjs';
 import { Data } from '../interfaces/interfacePokeApi';
+import { pokemonSeleccionado } from '../interfaces/interfacePokemon';
 
 @Injectable({
   providedIn: 'root'
@@ -20,11 +21,10 @@ export class PokemonService {
     return this.http.get<Data>(data);
   }
 
-  getPokemonByID(id: string): Observable<any> {
-    this.apiUrl = "https://pokeapi.co/api/v2/pokemon"
+  getPokemonByID(id: string): Observable<pokemonSeleccionado> {
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
-  getDescription() {
-
+  getDescription(id:string | number) {
+    return this.http.get<any>(`${this.apiUrl}-species/${id}`)
   }
 }

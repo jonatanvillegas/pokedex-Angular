@@ -1,1 +1,23 @@
-<p>detalle works!</p>
+<div id="container">
+  <div class="datos">
+    <div class="area">
+      <app-tarjeta [fullData]="pokemon"></app-tarjeta>
+    </div>
+    <div class="area">
+      <p><span class="etiqueta">Type</span> <span class="tipo"
+          *ngFor="let tipo of pokemon?.types">{{tipo.type.name}}</span></p>
+      <p><span class="etiqueta">Height</span>{{pokemon?.height}}'</p>
+      <p><span class="etiqueta">Weight</span>{{pokemon?.weight}} lbs.</p>
+    </div>
+    <div class="area">
+      <div id="descriptionContainer">
+        <div></div>
+        <p>{{description}}</p>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <button (click)="cambiarAbierto.emit()" class="contenedorFlecha" [ngClass]="{girar: abierto}">
+    <span>></span>
+  </button>
+</div>

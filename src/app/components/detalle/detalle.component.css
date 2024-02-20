@@ -1,0 +1,95 @@
+#container{
+  display: grid;
+  grid-template-columns: 1fr 30px;
+}
+.contenedorFlecha {
+  background-color: #fceab8;
+  border: unset;
+  cursor: pointer;
+}
+.contenedorFlecha span{
+  font-size: xx-large;
+  color: var(--var-color-blanco);
+  font-weight: bold;
+
+}
+.contenedorFlecha span:hover{
+  scale: 1.1;
+}
+.girar span{
+  display: inline-block;
+  transition: 0.5s;
+transform: rotate(180deg);
+}
+
+.datos{
+  height: 550px;
+  width: 95vw;
+  background-color: red;
+  display: grid;
+  grid-template-rows: 1fr 3fr 3fr;
+}
+.area{
+  padding-left: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 60%;
+  padding-right: 20px;
+}
+.area:first-child{
+  flex-grow: 1;
+  background-color: #bfc3ce;
+  background-image: linear-gradient(45deg, #c3c5c4 25%, transparent 25%, transparent 75%, #c3c5c4 75%, #c3c5c4),
+  linear-gradient(-45deg, #c3c5c4 25%, transparent 25%, transparent 75%, #c3c5c4 75%, #c3c5c4);
+  background-size: 20px 20px;
+}
+.area:nth-child(2) {
+background-color: #d3ecf6;
+background-image: linear-gradient(45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8),
+linear-gradient(-45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8);
+background-size: 20px 20px;
+}
+
+.area:last-child {
+  background: #cce486;
+  z-index: 2;
+}
+#descriptionContainer{
+  background-color: #f8f7db;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 0px rgb(0,0,0,0.75);
+  height: 70%;
+  margin-right: 40px;
+}
+#descriptionContainer div{
+  margin: 8px;
+background-color: #daeac4;
+border-radius: 0 8px 8px 0;
+}
+.etiqueta{
+  display: inline-block;
+  color: var(--var-color-blanco);
+  background-color: #67bcea;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: x-large;
+  width: 100px;
+  text-align: center;
+  margin-right: 20px;
+
+}
+p{
+  font-weight: bold;
+}
+.tipo{
+  background-color: gray;
+  border-radius: 5px;
+  color: var(--var-color-blanco);
+  padding: 2px;
+  font-size: x-large;
+  margin-left: 5px;
+}

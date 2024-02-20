@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Pokemon } from 'src/app/interfaces/interfacePokeApi';
 import { PokemonService } from 'src/app/services/pokemon.service';
+import { pokemonSeleccionado } from 'src/app/interfaces/interfacePokemon';
 
 @Component({
   selector: 'app-home',
@@ -14,14 +15,14 @@ export class HomeComponent implements OnInit {
   pokemons: Pokemon[] = [];
   page: number = 1;
   cargando: boolean = false;
+  pokemonSeleccionado?:pokemonSeleccionado;
+  imagen?:string;
+  detalle:Boolean=false;
 
   constructor(private _pokemonService: PokemonService) { }
 
   ngOnInit(): void {
     this.obtenerDatos();
-    this._pokemonService.getPokemonByID('1').subscribe(data => {
-      console.log(data)
-    })
   }
   obtenerDatos() {
     this.cargando = true;
@@ -42,6 +43,19 @@ export class HomeComponent implements OnInit {
       === e.srcElement.scrollHeight) {
       this.obtenerDatos()
       targetElement.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+  tarjetaSeleccionada(id:string){
+     this._pokemonService.getPokemonByID(id).subscribe(data => {
+      this.pokemonSeleccionado = data
+      this.imagen = data.sprites.front_default
+      console.log(this.pokemonSeleccionado)
+    })
+  }
+
+  cambiarEstadoDetalle(){
+    if (this.pokemonSeleccionado) {
+      this.detalle = !this.detalle;
     }
   }
 }

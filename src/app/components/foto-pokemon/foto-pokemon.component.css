@@ -13,3 +13,7 @@
 
  );
 }
+#container img{
+  width: 100%;
+  image-rendering: pixelated;
+}

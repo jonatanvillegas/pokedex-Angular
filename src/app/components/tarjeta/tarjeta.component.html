@@ -1,6 +1,6 @@
-<div id="container">
-  <span class="flecha">></span>
-  <div class="tarjeta">
+<div id="container" [ngClass]="{tarjetaSeleccionada: tarjetaSeleccionada}">
+  <span class="flecha" *ngIf="tarjetaSeleccionada">></span>
+  <div class="tarjeta" (click)="seleccionado.emit(id)">
     <div id="circulo"></div>
     <img src={{imagen}} alt="">
     <span> No. {{id}}</span>

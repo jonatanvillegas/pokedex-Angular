@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { pokemonSeleccionado } from 'src/app/interfaces/interfacePokemon';
 
 @Component({
   selector: 'app-foto-pokemon',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./foto-pokemon.component.css']
 })
 export class FotoPokemonComponent {
+
+
+  @Input() pokemon?: pokemonSeleccionado;
+
 
 }
